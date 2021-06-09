@@ -6,16 +6,16 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 	    jsdoc : {
 	           generic: {
-	               src: [ './lib/webmushra/**/*.js' ],
+	               src: [ './webmushra/lib/webmushra/**/*.js' ],
 	               jsdoc: './node_modules/.bin/jsdoc',
 	               options: {
-	                   destination: './doc/jsdoc/',
-	                   configure: './doc/jsdoc_conf.json'
+	                   destination: './webmushra/doc/jsdoc/',
+	                   configure: './webmushra/doc/jsdoc_conf.json'
 	               }
 			   }
 	    },
         qunit: {
-            files: [ 'tests/test_yaml.html' ]
+            files: [ './webmushra/tests/test_yaml.html' ]
         },
         jshint: {
             options: {
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                     exports: false
                 }
             },
-            files: [ 'lib/webmushra/**/*.js' ]
+            files: [ './webmushra/lib/webmushra/**/*.js' ]
         },
         processhtml: {
             options: {
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             separator: ';'
           },
           generic: {
-            src: [ 'lib/webmushra/**/*.js' ],
+            src: [ './webmushra/lib/webmushra/**/*.js' ],
             dest: 'dist/<%= grunt.task.current.target %>/lib/webMUSHRA.js'
           }
         },
@@ -95,25 +95,25 @@ module.exports = function(grunt) {
                   src: [ '**/*' ],
                   dest: '/'
                 }, {
-                  src: [ 'configs/**' ],
+                  src: [ './webmushra/configs/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'favicon.ico' ],
+                  src: [ './webmushra/favicon.ico' ],
                   dest: '/'
                 }, {
-                  src: [ 'service/**' ],
+                  src: [ './webmushra/service/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'lib/external/**' ],
+                  src: [ './webmushra/lib/external/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'doc/*.pdf' ],
+                  src: [ './webmushra/doc/*.pdf' ],
                   dest: '/'
                 }, {
-                  src: [ 'results/**' ],
+                  src: [ './webmushra/results/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'design/**' ],
+                  src: [ './webmushra/design/**' ],
                   dest: '/'
                 }]
             },
@@ -132,33 +132,33 @@ module.exports = function(grunt) {
                   src: [ 'THIRD-PARTY-NOTICES.txt' ],
                   dest: '/'
                 }, {
-                  src: [ 'startup.js' ],
+                  src: [ './webmushra/startup.js' ],
                   dest: '/'
                 }, {
-                  src: [ 'index.html' ],
+                  src: [ './webmushra/index.html' ],
                   dest: '/'
                 }, {
                   expand: true,
-                  cwd: 'doc/jsdoc/',
+                  cwd: './webmushra/doc/jsdoc/',
                   src: [ '**/*' ],
-                  dest: '/doc'
+                  dest: './webmushra/doc'
                 }, {
-                  src: [ 'configs/**' ],
+                  src: [ './webmushra/configs/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'service/**' ],
+                  src: [ './webmushra/service/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'lib/**' ],
+                  src: [ './webmushra/lib/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'doc/*.pdf' ],
+                  src: [ './webmushra/doc/*.pdf' ],
                   dest: '/'
                 }, {
-                  src: [ 'results/**' ],
+                  src: [ './webmushra/results/**' ],
                   dest: '/'
                 }, {
-                  src: [ 'design/**' ],
+                  src: [ './webmushra/design/**' ],
                   dest: '/'
                 }]
             }
