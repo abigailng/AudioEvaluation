@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 	    jsdoc : {
 	           generic: {
-	               src: [ './webmushra/lib/webmushra/**/*.js' ],
+	               src: [ './lib/webmushra/**/*.js' ],
 	               jsdoc: './node_modules/.bin/jsdoc',
 	               options: {
 	                   destination: './doc/jsdoc/',
