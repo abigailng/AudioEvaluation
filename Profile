@@ -1,1 +1,1 @@
-web: pymushra server
+web pymushra server
